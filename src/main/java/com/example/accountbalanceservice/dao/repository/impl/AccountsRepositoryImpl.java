@@ -22,7 +22,7 @@ public class AccountsRepositoryImpl implements AccountsRepository {
             "VALUES (:userId,:currency)";
     private static final String SELECT_FROM_ACCOUNT_BY_USER_ID = "SELECT * " +
             "FROM accounts " +
-            "WHERE userId = :userId";
+            "WHERE user_id = :userId";
     private static final String SELECT_CURRENT_ACCOUNT_ID = "SELECT currval(pg_get_serial_sequence('accounts', 'account_id'))";
     private static final String UPDATE_ACCOUNT_BALANCE_REPLENISH = "UPDATE accounts " +
             "SET balance = balance + :amount " +
